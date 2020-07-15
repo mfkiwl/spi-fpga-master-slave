@@ -53,11 +53,11 @@ MOSI | OUT | 1 | SPI serial data from master to slave.
 MISO | IN | 1 | SPI serial data from slave to master.
 --- | --- | --- | ---
 DIN_ADDR | IN | log2(SLAVE_COUNT) | SPI slave address.
-DIN | IN | 8 | Input data for SPI slave.
+DIN | IN | WORD_SIZE | Input data for SPI slave.
 DIN_LAST | IN | 1 | When DIN_LAST = 1, after transmit these input data is asserted CS_N.
 DIN_VLD | IN | 1 | When DIN_VLD = 1, input data are valid.
 DIN_RDY | OUT | 1 | When DIN_RDY = 1, valid input data are accept.
-DOUT | OUT | 8 | Output data from SPI slave.
+DOUT | OUT | WORD_SIZE | Output data from SPI slave.
 DOUT_VLD | OUT | 1 | When DOUT_VLD = 1, output data are valid.
 
 # SPI slave
@@ -80,8 +80,8 @@ CS_N | IN | 1 | SPI chip select active in low.
 MOSI | IN | 1 | SPI serial data from master to slave.
 MISO | OUT | 1 | SPI serial data from slave to master.
 --- | --- | --- | ---
-DIN | IN | 8 | Input data for SPI master.
+DIN | IN | WORD_SIZE | Input data for SPI master.
 DIN_VLD | IN | 1 | When DIN_VLD = 1, input data are valid.
 DIN_RDY | OUT | 1 | When DIN_RDY = 1, valid input data are accept.
-DOUT | OUT | 8 | Output data from SPI master.
+DOUT | OUT | WORD_SIZE | Output data from SPI master.
 DOUT_VLD | OUT | 1 | When DOUT_VLD = 1, output data are valid.
